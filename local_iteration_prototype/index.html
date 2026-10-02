@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Leap | Explore Your Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=Press+Start+2P&family=VT323&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme gamified">
+    <div id="crt-overlay"></div>
+    <div id="scanline"></div>
+    <div class="bg-decoration glow-blue"></div>
+    <div class="bg-decoration glow-yellow"></div>
+    <div class="bg-decoration glow-mint"></div>
+    <div class="bg-decoration glow-accent-blue"></div>
+    <div class="bg-decoration glow-accent-yellow"></div>
+    <div id="star-container"></div>
+    <div id="cursor-glow"></div>
+    <div class="tech-particle" style="top: 80%; left: 10%;"></div>
+    <div class="tech-particle" style="top: 20%; left: 40%;"></div>
+    <div class="tech-particle" style="top: 60%; left: 70%;"></div>
+    <div class="tech-particle" style="top: 10%; left: 90%;"></div>
+    <div id="app-container">
+        <aside id="sidebar">
+            <div class="logo">
+                <span class="logo-icon"><img src="assets/Cilo.png" alt="Cilo" class="logo-img"></span>
+                <span class="logo-text">Career Leap</span>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li class="active" data-view="home">
+                        <span class="nav-icon">🏠</span> Home
+                    </li>
+                    <li data-view="diagnostic">
+                        <span class="nav-icon">🧠</span> Diagnostic
+                    </li>
+                    <li data-view="simulator">
+                        <span class="nav-icon">🎮</span> Simulator
+                    </li>
+                    <li data-view="development">
+                        <span class="nav-icon">📈</span> Development
+                    </li>
+                    <li data-view="college">
+                        <span class="nav-icon">🎓</span> College Hub
+                    </li>
+                    <li data-view="conversation">
+                        <span class="nav-icon">💬</span> Conversations
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-profile-mini">
+                <div class="avatar">U</div>
+                <div class="user-info">
+                    <p class="user-name">Guest Explorer</p>
+                    <p class="user-status">Getting Started</p>
+                </div>
+            </div>
+        </aside>
+
+        <main id="main-content">
+            <!-- Dynamic Content Injected Here -->
+            <section id="view-home" class="view active">
+                <div class="hero">
+                    <div class="hero-decoration left"><img src="assets/Cilo.png" alt="Cilo"></div>
+                    <h1>Welcome to <span class="accent-text">Career Leap</span></h1>
+                    <div class="hero-decoration right"><img src="assets/star.png" alt="Star"></div>
+                    <p class="subtitle" style="font-family: 'VT323', monospace; font-size: 1.8rem;">[ MISSION: TURN
+                        DREAMS INTO REALITY ]</p>
+                </div>
+                <div id="cilo-intro">
+                    <div class="cilo-card">
+                        <div class="cilo-avatar"><img src="assets/Cilo.png" alt="Cilo"></div>
+                        <div class="cilo-message">
+                            <h3>Hello, I'm Cilo</h3>
+                            <p>I'm your AI mentor. I'll help you explore careers, simulate paths, and prepare for
+                                college. Ready to jump in?</p>
+                            <button class="btn btn-primary" onclick="app.switchView('diagnostic')">Start AI
+                                Diagnostic</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="cilo-persistent-bubble" class="hidden"></div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="js/ai.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/components/diagnostic.js"></script>
+    <script src="js/components/simulator.js"></script>
+    <script src="js/components/development.js"></script>
+    <script src="js/components/collegeHub.js"></script>
+    <script src="js/components/passionProject.js"></script>
+    <script src="js/components/cilo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
